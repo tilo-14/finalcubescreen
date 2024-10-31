@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Cube Viewer</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #ffffff;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        #controls {
+            position: fixed;
+            bottom: 20px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        #screenshot-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #0066ff;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #resolution-select {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="canvas-container"></div>
+    <div id="controls">
+        <select id="resolution-select">
+            <option value="4K">4K (3840 x 2160)</option>
+            <option value="8K">8K (7680 x 4320)</option>
+            <option value="16K">16K (15360 x 8640)</option>
+        </select>
+        <button id="screenshot-button">Take Screenshot</button>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>
